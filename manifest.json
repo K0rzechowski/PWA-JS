@@ -1,6 +1,7 @@
 {
     "name": "MyWebSite",
     "short_name": "MySite",
+    "start url": "https://k0rzechowski.github.io/PWA-JS/index.html",
     "icons": [
       {
         "src": "/images/web-app-manifest-192x192.png",
