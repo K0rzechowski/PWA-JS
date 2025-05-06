@@ -1,20 +1,37 @@
-body {
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
     font-family: 'Segoe UI', sans-serif;
     margin: 0;
     background: #f0f0f0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
   }
   
   header {
     background: #2196f3;
     color: white;
     padding: 1rem;
-    text-align: center;
   }
   
   nav a {
     margin: 0 1rem;
     color: white;
     text-decoration: none;
+    font-weight: bold;
+  }
+  
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
   }
   
   .hero-img {
@@ -29,13 +46,16 @@ body {
     flex-wrap: wrap;
     gap: 1rem;
     justify-content: center;
-    align-items: center;
   }
   
   .gallery img {
     width: 30%;
     border-radius: 8px;
-    
+    transition: transform 0.3s ease;
+  }
+  
+  .gallery img:hover {
+    transform: scale(1.05);
   }
   
   form {
@@ -44,12 +64,15 @@ body {
     width: 90%;
     max-width: 400px;
     margin: auto;
-    
+    text-align: left;
   }
   
-  form input, form textarea {
+  form input,
+  form textarea {
     margin-bottom: 1rem;
     padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
   }
   
   button {
@@ -57,17 +80,35 @@ body {
     background-color: #2196f3;
     color: white;
     border: none;
+    border-radius: 4px;
     cursor: pointer;
   }
-  main {
-    align-items: center;
-    text-align: center;
-    margin: 2rem auto;
+  
+  footer {
+    background: #ddd;
     padding: 1rem;
   }
-
-  footer {
-    text-align: center;
-    padding: 1rem;
+  
+  /* 📱 RWD: dla ekranów telefonów */
+  @media (max-width: 768px) {
+    .gallery {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .gallery img {
+      width: 90%;
+    }
+  
+    nav {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+  
+    form {
+      text-align: center;
+    }
   }
   
