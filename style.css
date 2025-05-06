@@ -35,6 +35,7 @@ body {
   .gallery img {
     width: 30%;
     border-radius: 8px;
+    
   }
   
   form {
@@ -43,7 +44,7 @@ body {
     width: 90%;
     max-width: 400px;
     margin: auto;
-    align-items: center;
+    
   }
   
   form input, form textarea {
@@ -57,5 +58,16 @@ body {
     color: white;
     border: none;
     cursor: pointer;
+  }
+  main {
+    align-items: center;
+    text-align: center;
+    margin: 2rem auto;
+    padding: 1rem;
+  }
+
+  footer {
+    text-align: center;
+    padding: 1rem;
   }
   
